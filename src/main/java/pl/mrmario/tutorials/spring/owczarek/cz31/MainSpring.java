@@ -13,8 +13,8 @@ import pl.mrmario.tutorials.spring.owczarek.cz31.domain.User;
 public class MainSpring {
 
 	public static void main(String[] args) {
-		ApplicationContext context = new AnnotationConfigApplicationContext(LoggersConfiguration.class, RepositoriesConfiguration.class);
-
+		//ApplicationContext context = new AnnotationConfigApplicationContext(LoggersConfiguration.class, RepositoriesConfiguration.class);
+		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfiguration.class);
 		UsersRepository userRep = context.getBean("usersRepository", UsersRepository.class);
 		User janek = userRep.createUser("MrMario108");
 	}
